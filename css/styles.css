@@ -1,0 +1,283 @@
+/**************************
+      PURE.CSS EDITS
+**************************/
+#menu .pure-menu-heading {
+  background-color: rgba(254, 117, 127, 1);
+}
+#menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
+    background: #333;
+    color: rgba(254, 117, 127, 1);
+}
+.content-subhead {
+  color: black;
+  border: 3px solid black;
+  border-radius: 2px;
+  padding: 10px;
+  display: inline-block;
+}
+.subsubhead {
+  margin-left: 5%;
+}
+
+.moreTopSpace {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.svgimg:hover > svg path, .svgimg:hover > svg rect {
+  fill: #e0e0e0;
+}
+
+.iconsList img {
+  margin: 5px; /* Changes to 10px in (max-width: 768px) */
+  line-height: 0;
+  text-align: center;
+}
+
+.evenHeight {
+  height:187px;
+}
+.resumeBtn {
+  margin: 20px auto 0;
+  text-align: left;
+}
+.resumeBtn a {
+  width: 95%;
+}
+
+#contactForm input, #message-input {
+  width: 90%;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 0;
+}
+#contactForm input:focus, #message-input:focus {
+  border: 2px solid rgb(67, 175, 215);
+}
+.has-error {
+  border: 2px solid red;
+}
+
+#footer {
+  font-size: 87.5%;
+  line-height: 1.6em;
+  border-top: 1px solid #eee;
+  margin-top: 3.4286em;
+  padding: 1.1429em;
+  background: rgb(250, 250, 250);
+}
+
+@media only screen and (max-width: 768px) {
+  #layout {
+    padding: 0!important;
+  }
+  .pure-u-1-2 {
+    width: 100%;
+  }
+  .iconsList img{
+    margin: 10px;
+    line-height: 0;
+  }
+}
+
+/**************************
+          BUTTONS
+**************************/
+.pure-button-primary, .resumeBtn a, #submit {
+  background-color: rgba(254, 117, 127, .8);
+  color: #fff;
+  border: 0 !important;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.pure-button-primary:hover, .resumeBtn a:hover, #submit:hover {
+  background-color: rgba(254, 117, 127, 1);
+  background-image: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/**************************
+    PORTFOLIO CONTENT
+**************************/
+.port-block {
+  width: 90%;
+  height: 250px;
+  margin: 10px auto;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+
+.dev-block-1 {
+  background: #fff url('../img/') top right;
+  background-size: 100% auto;
+}
+.dev-block-2 {
+  background: #fff url('../img/') top right;
+  background-size: 100% auto;
+}
+.wire-block-1 {
+  background: #fff url('../img/ikea-thmb.png') top right;
+  background-size: 100% auto;
+}
+.wire-block-2 {
+  background: #fff url('../img/wt-nt.png') center left;
+  background-size: 100% auto;
+}
+.des-block-1 {
+  background: #fff url('../img/rainbow.png') top right;
+  background-size: 120% auto;
+}
+.des-block-2 {
+  background: #fff url('../img/cactus.jpg') bottom center;
+  background-size: 100% auto;
+}
+
+.block-overlay {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom:0;
+  background-color: rgba(254, 117, 127, .8);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.block-overlay h4 {
+  margin-left: 10%;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1.2em;
+  margin-top: 1em;
+}
+.block-overlay:hover {
+  text-decoration: underline;
+  color: #fff;
+  background-color: rgba(254, 117, 127, 1);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.overlay-link {
+  color: #fff;
+}
+
+/**************************
+   BACK TO TOP BUTTON
+**************************/
+.cd-top {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(254, 117, 127, .5) url(../img/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all .3s ease;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+/*.cd-top.cd-fade-out {*/
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  /*opacity: .5;*/
+/*}*/
+.no-touch .cd-top:hover, .cd-top:hover {
+  background-color: rgba(254, 117, 127, 1);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all .3s ease;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+/**************************
+   HORIZONTAL MENU
+**************************/
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #111;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
