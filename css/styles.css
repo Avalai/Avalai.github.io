@@ -2,17 +2,6 @@
       PURE.CSS EDITS
 **************************/
 
-/********* MENU **********/
-
-#menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
-    background-color: rgba(254, 117, 127, 1);
-    color: #fff;
-}
-  /*** SVG menu icons **/
-.svgimg:hover > svg path, .svgimg:hover > svg rect {
-  fill: #fff;
-}
-
 /********* REUSABLE **********/
 .fivePercentLeft {
   margin-left: 5%;
@@ -33,7 +22,7 @@
 }
 
 /********* EXPERIENCE BLOCK **********/
-.iconsList img {
+#iconsList img {
   margin: 5px; /* Changes to 10px in (max-width: 768px) */
   line-height: 0;
   text-align: center;
@@ -81,7 +70,7 @@
   .pure-u-1-2 {
     width: 100%;
   }
-  .iconsList img{
+  #iconsList img{
     margin: 10px;
     line-height: 0;
   }
@@ -240,18 +229,17 @@
 ul#topnav {
   list-style-type: none;
   margin: 0;
-  padding: 0;
   overflow: hidden;
   border-top: 1px solid #666;
   text-align: center;
   background-color: #fff;
+  color: #666;
 }
 
 ul#topnav li {float: left;}
 
-ul#topnav li a {
+ul#topnav li a.pure-menu-link {
   display: inline-block;
-  color: #666;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -259,9 +247,26 @@ ul#topnav li a {
   font-size: 17px;
 }
 
-ul#topnav li a:hover {background-color: rgb(70, 70, 70);}
+a.pure-menu-link:hover, a.pure-menu-link:focus, li#icon:hover, .active-li {
+    background-color: rgba(254, 117, 127, 1);
+    color: #fff;
+}
+  /*** SVG menu icons **/
+.svgimg:hover > svg path, .svgimg:hover > svg rect {
+  fill: #fff;
+}
 
-ul#topnav li.icon, ul#topnav li.no-select {display: none;}
+
+ul#topnav li#icon, ul#topnav li.no-select {display: none;}
+
+button.hamburger {
+  padding: 0;
+  margin: 10px;
+}
+button.hamburger, span.hamburger-inner,
+span.hamburger-inner::before, span.hamburger-inner::after {
+  width: 30px;
+}
 
 li.no-select, li.no-select > a,
 li.no-select:hover, li.no-select:active,
@@ -273,7 +278,7 @@ li.no-select a:hover, li.no-select a:active {
 
 @media screen and (max-width:760px) {
   ul#topnav li:not(:first-child) {display: none;}
-  ul#topnav li.icon, li.no-select{
+  ul#topnav li#icon, li.no-select{
     float: right;
     display: inline-block;
   }
@@ -293,7 +298,7 @@ li.no-select a:hover, li.no-select a:active {
     border: 3px solid #000;
     border-width: 0 0 3px 3px;
   }
-  ul#topnav.responsive li.icon {
+  ul#topnav.responsive li#icon {
     position: absolute;
     right: 10px;
     top: 0;

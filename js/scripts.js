@@ -11,7 +11,10 @@ $(document).ready(function() {
     $('.pure-menu-link').click(function(){
       $('#topnav').removeClass('responsive');
     });
-
+    $('#icon').click(function(){
+      $('.hamburger--squeeze').first().toggleClass('is-active');
+      $('#icon').toggleClass('active-li');
+    });
 });
 
 /*

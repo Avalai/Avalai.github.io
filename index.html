@@ -16,7 +16,10 @@
             <link rel="stylesheet" href="css/layouts/side-menu.css">
         <!--<![endif]-->
 
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fancy menu hamburger icon -->
+    <link href="css/hamburgers.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet" >
 
 </head>
 
@@ -58,14 +61,13 @@
                         </svg>
                       </a>
                     </li>
-                    <li class="icon">
+                    <li id="icon">
                       <a href="javascript:void(0);" style="font-size:15px;" onclick="menuToggle()">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        	 width="22px" height="22px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-                        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2
-                        	c0,1.104,0.896,2,2,2h24c1.104,0,2-0.896,2-2C30,14.896,29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24
-                        	c1.104,0,2-0.896,2-2S29.104,22,28,22z"/>
-                        </svg>
+                        <button class="hamburger hamburger--squeeze" type="button">
+                          <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                          </span>
+                        </button>
                       </a>
                     </li>
                   </ul>
