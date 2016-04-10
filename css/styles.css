@@ -1,21 +1,20 @@
 /**************************
       PURE.CSS EDITS
 **************************/
-#menu .pure-menu-heading {
-  background-color: rgba(254, 117, 127, 1);
-}
+
+/********* MENU **********/
+
 #menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
-    background: #333;
-    color: rgba(254, 117, 127, 1);
+    background-color: rgba(254, 117, 127, 1);
+    color: #fff;
 }
-.content-subhead {
-  color: black;
-  border: 3px solid black;
-  border-radius: 2px;
-  padding: 10px;
-  display: inline-block;
+  /*** SVG menu icons **/
+.svgimg:hover > svg path, .svgimg:hover > svg rect {
+  fill: #fff;
 }
-.subsubhead {
+
+/********* REUSABLE **********/
+.fivePercentLeft {
   margin-left: 5%;
 }
 
@@ -23,18 +22,24 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
-.svgimg:hover > svg path, .svgimg:hover > svg rect {
-  fill: #e0e0e0;
+
+/********* TITLES **********/
+.content-subhead {
+  color: black;
+  border: 3px solid black;
+  border-radius: 2px;
+  padding: 10px;
+  display: inline-block;
 }
 
+/********* EXPERIENCE BLOCK **********/
 .iconsList img {
   margin: 5px; /* Changes to 10px in (max-width: 768px) */
   line-height: 0;
   text-align: center;
 }
-
 .evenHeight {
-  height:187px;
+  min-height:187px;
 }
 .resumeBtn {
   margin: 20px auto 0;
@@ -44,6 +49,7 @@
   width: 95%;
 }
 
+/********* CONTACT FORM **********/
 #contactForm input, #message-input {
   width: 90%;
   margin-bottom: 20px;
@@ -57,6 +63,7 @@
   border: 2px solid red;
 }
 
+/********* FOOTER **********/
 #footer {
   font-size: 87.5%;
   line-height: 1.6em;
@@ -66,6 +73,7 @@
   background: rgb(250, 250, 250);
 }
 
+/********* MEDIA QUERIES **********/
 @media only screen and (max-width: 768px) {
   #layout {
     padding: 0!important;
@@ -204,10 +212,6 @@
   visibility: visible;
   opacity: 1;
 }
-/*.cd-top.cd-fade-out {*/
-  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  /*opacity: .5;*/
-/*}*/
 .no-touch .cd-top:hover, .cd-top:hover {
   background-color: rgba(254, 117, 127, 1);
   -webkit-transition: all .3s ease;
@@ -238,14 +242,15 @@ ul.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  border-top: 1px solid #666;
+  text-align: center;
 }
 
 ul.topnav li {float: left;}
 
 ul.topnav li a {
   display: inline-block;
-  color: #f2f2f2;
+  color: #666;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -253,11 +258,11 @@ ul.topnav li a {
   font-size: 17px;
 }
 
-ul.topnav li a:hover {background-color: #111;}
+ul.topnav li a:hover {background-color: rgb(70, 70, 70);}
 
 ul.topnav li.icon {display: none;}
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:760px) {
   ul.topnav li:not(:first-child) {display: none;}
   ul.topnav li.icon {
     float: right;
@@ -265,7 +270,7 @@ ul.topnav li.icon {display: none;}
   }
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:760px) {
   ul.topnav.responsive {position: relative;}
   ul.topnav.responsive li.icon {
     position: absolute;
@@ -277,6 +282,48 @@ ul.topnav li.icon {display: none;}
     display: inline;
   }
   ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+#menu ul.pure-menu-list {
+  overflow: hidden;
+}
+
+#menu a.pure-menu-link {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+#menu ul.pure-menu-list li.icon {
+  display: none;
+}
+
+@media screen and (max-width:680px) {
+  #menu ul.pure-menu-list li.icon(:first-child) {
+    display: none;
+  }
+  #menu ul.pure-menu-list li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  #menu ul.pure-menu-list.responsive {
+    position: relative;
+  }
+  #menu ul.pure-menu-list.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #menu ul.pure-menu-list.responsive li {
+    float: none;
+    display: inline;
+  }
+  #menu ul.pure-menu-list.responsive li a {
     display: block;
     text-align: left;
   }
