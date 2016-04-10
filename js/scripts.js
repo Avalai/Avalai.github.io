@@ -8,6 +8,9 @@ $(document).ready(function() {
     // Initialize fancybox
     $(".fancybox").fancybox();
 
+    $('.pure-menu-link').click(function(){
+      $('#topnav').removeClass('responsive');
+    });
 
 });
 

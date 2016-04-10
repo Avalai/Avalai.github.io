@@ -237,18 +237,19 @@
 /**************************
    HORIZONTAL MENU
 **************************/
-ul.topnav {
+ul#topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   border-top: 1px solid #666;
   text-align: center;
+  background-color: #fff;
 }
 
-ul.topnav li {float: left;}
+ul#topnav li {float: left;}
 
-ul.topnav li a {
+ul#topnav li a {
   display: inline-block;
   color: #666;
   text-align: center;
@@ -258,72 +259,50 @@ ul.topnav li a {
   font-size: 17px;
 }
 
-ul.topnav li a:hover {background-color: rgb(70, 70, 70);}
+ul#topnav li a:hover {background-color: rgb(70, 70, 70);}
 
-ul.topnav li.icon {display: none;}
+ul#topnav li.icon, ul#topnav li.no-select {display: none;}
 
-@media screen and (max-width:760px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-  }
+li.no-select, li.no-select > a,
+li.no-select:hover, li.no-select:active,
+li.no-select a:hover, li.no-select a:active {
+  cursor: default !important;
+  background-color: rgba(000,000,000,0) !important;
+  color: rgba(000,000,000,0) !important;
 }
 
 @media screen and (max-width:760px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-  }
-}
-
-#menu ul.pure-menu-list {
-  overflow: hidden;
-}
-
-#menu a.pure-menu-link {
-  text-align: center;
-  line-height: 1.5em;
-}
-
-#menu ul.pure-menu-list li.icon {
-  display: none;
-}
-
-@media screen and (max-width:680px) {
-  #menu ul.pure-menu-list li.icon(:first-child) {
-    display: none;
-  }
-  #menu ul.pure-menu-list li.icon {
+  ul#topnav li:not(:first-child) {display: none;}
+  ul#topnav li.icon, li.no-select{
     float: right;
     display: inline-block;
   }
+  ul#topnav {
+    border: 0;
+    position:absolute;
+    top:0;
+    right: 10px;
+  }
 }
 
-@media screen and (max-width:680px) {
-  #menu ul.pure-menu-list.responsive {
-    position: relative;
-  }
-  #menu ul.pure-menu-list.responsive li.icon {
+@media screen and (max-width:760px) {
+  ul#topnav.responsive {
     position: absolute;
     right: 0;
+    width: 75%;
+    border: 3px solid #000;
+    border-width: 0 0 3px 3px;
+  }
+  ul#topnav.responsive li.icon {
+    position: absolute;
+    right: 10px;
     top: 0;
   }
-  #menu ul.pure-menu-list.responsive li {
+  ul#topnav.responsive li {
     float: none;
     display: inline;
   }
-  #menu ul.pure-menu-list.responsive li a {
+  ul#topnav.responsive li a {
     display: block;
     text-align: left;
   }
