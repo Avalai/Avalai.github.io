@@ -78,6 +78,11 @@
     margin: 10px;
     line-height: 0;
   }
+
+  /* Fixes bg-imgs of portfolio on mobile */
+  .port-block {
+    background-size: cover;
+  }
 }
 
 /**************************
