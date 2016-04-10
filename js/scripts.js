@@ -10,12 +10,16 @@ $(document).ready(function() {
 
     $('.pure-menu-link').click(function(){
       $('#topnav').removeClass('responsive');
+      toggleMenu();
     });
-    $('#icon').click(function(){
-      $('.hamburger--squeeze').first().toggleClass('is-active');
-      $('#icon').toggleClass('active-li');
-    });
+
+    $('#icon').click(toggleMenu);
 });
+
+function toggleMenu(){
+  $('.hamburger--squeeze').first().toggleClass('is-active');
+  $('#icon').toggleClass('active-li');
+};
 
 /*
     // Scripts for the Contact Form

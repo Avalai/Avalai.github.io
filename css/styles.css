@@ -39,6 +39,10 @@
 }
 
 /********* CONTACT FORM **********/
+#contactForm {
+  margin-left: auto;
+  margin-right: auto;
+}
 #contactForm input, #message-input {
   width: 90%;
   margin-bottom: 20px;
@@ -228,7 +232,9 @@
 **************************/
 ul#topnav {
   list-style-type: none;
+  display: inline-block;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   border-top: 1px solid #666;
   text-align: center;
@@ -245,6 +251,10 @@ ul#topnav li a.pure-menu-link {
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px;
+}
+ul#topnav li a.pure-menu-link.svgimg {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 a.pure-menu-link:hover, a.pure-menu-link:focus, li#icon:hover, .active-li {
@@ -288,9 +298,8 @@ li.no-select a:hover, li.no-select a:active {
     top:0;
     right: 10px;
   }
-}
 
-@media screen and (max-width:760px) {
+  /* RESPONSIVE */
   ul#topnav.responsive {
     position: absolute;
     right: 0;
@@ -310,5 +319,9 @@ li.no-select a:hover, li.no-select a:active {
   ul#topnav.responsive li a {
     display: block;
     text-align: left;
+    padding-left: 40px;
+  }
+  ul#topnav.responsive li#icon a {
+    padding-left: 0;
   }
 }
