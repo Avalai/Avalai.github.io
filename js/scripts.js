@@ -36,7 +36,7 @@ $(document).ready(function() {
       return false;
     });
 
-
+/*
     // Scripts for the Contact Form
     $('input').blur(function() {
       var fieldName = $(this).attr(name);
@@ -120,7 +120,7 @@ $(document).ready(function() {
     });
 
 });
-
+*/
 });
 
 function toggleMenu(){
@@ -128,6 +128,7 @@ function toggleMenu(){
   $('#icon').toggleClass('active-li');
 };
 
+/*
 function addNameError() {
   $('#name-input').addClass('has-error'); // add the error class to show red input
   $('#name-input').append('<div class="help-block">' + data.errors.name + '</div>'); // add the actual error message under our input
