@@ -5,23 +5,38 @@
 
 $(document).ready(function() {
 
-    // Initialize fancybox
-    $(".fancybox").fancybox();
-
     $('.pure-menu-link').click(function(){
       $('#topnav').removeClass('responsive');
       toggleMenu();
     });
 
     $('#icon').click(toggleMenu);
-});
 
-function toggleMenu(){
-  $('.hamburger--squeeze').first().toggleClass('is-active');
-  $('#icon').toggleClass('active-li');
-};
+    // Initialize fancybox
+    $(".fancybox").fancybox();
 
-/*
+    // Ikea Gallery
+    $(".open-ikeagall").click(function() {
+      $.fancybox.open([
+          {
+              href : 'img/ikea1.png',
+              title : 'Laying out the basic functions of the app.'
+          },
+          {
+              href : 'img/ikea2.png',
+              title : 'Thinking out the main screens that would be used.'
+          },
+          {
+              href : 'img/ikea3.png',
+              title : 'Brainstorming button locations.'
+          }
+      ], {
+          padding : 0
+      });
+      return false;
+    });
+
+
     // Scripts for the Contact Form
     $('input').blur(function() {
       var fieldName = $(this).attr(name);
@@ -105,6 +120,13 @@ function toggleMenu(){
     });
 
 });
+
+});
+
+function toggleMenu(){
+  $('.hamburger--squeeze').first().toggleClass('is-active');
+  $('#icon').toggleClass('active-li');
+};
 
 function addNameError() {
   $('#name-input').addClass('has-error'); // add the error class to show red input
