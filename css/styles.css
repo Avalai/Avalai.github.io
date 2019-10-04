@@ -91,5 +91,19 @@ a {
 }
 #resume header ul { text-align: right; }
 
-#resume .horizontal-list { text-align: center; }
-#resume .horizontal-list li { font-size: 100%; list-style-type: none; display: inline-block; /*See media query for other version*/ width: 24%; box-sizing: border-box; }
+#resume h3 + p,
+#resume h3 + p + p {
+    margin: .2rem;
+}
+#resume h3 + p + p {
+    font-style: italic;
+    font-size: .9rem;
+}
+
+#resume .horizontal-list { text-align: left; }
+#resume .horizontal-list li { 
+    font-size: 100%; 
+    list-style-type: none; 
+    display: inline-block; /*See media query for other version*/ 
+    width: 24%; 
+}
