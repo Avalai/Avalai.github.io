@@ -6,6 +6,8 @@
 i {
     color: #ff9393;
 }
+.nopadding { padding: 0; }
+.nomargin { margin: 0; }
 
 html {
     min-height: 100%;
@@ -43,6 +45,14 @@ body {
     z-index: -2;
 }
 
+header {
+    --h1-margin: 0.7rem 0;
+}
+
+h1 {
+    margin: var(--h1-margin);
+}
+
 h2 {
     margin-top: 2rem;
 }
@@ -65,3 +75,21 @@ a {
     text-decoration-color: #ffd4d3;
     text-decoration-style: dashed;
 }
+
+.social {
+    display: flex;
+}
+.social li {
+    width: 5%;
+}
+
+/* RESUME */
+#resume header {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--h1-margin)
+}
+#resume header ul { text-align: right; }
+
+#resume .horizontal-list { text-align: center; }
+#resume .horizontal-list li { font-size: 100%; list-style-type: none; display: inline-block; /*See media query for other version*/ width: 24%; box-sizing: border-box; }
