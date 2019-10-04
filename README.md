@@ -1,7 +1,7 @@
 # Avalai.github.io
 Hosted at https://www.marinamilette.com
 
-In this GitHub Pages site, you can find:
+In this site, you can find:
 - My work experience
 - My education experience
 - Some tidbits about my personality and life
