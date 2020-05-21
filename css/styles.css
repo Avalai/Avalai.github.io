@@ -56,6 +56,9 @@ main {
     max-width: 90vw;
     margin: 60px auto;
 }
+@media only screen and (max-width: 750px) {
+    main { padding: 0 5vw; }
+}
 
 h1 {
     margin: 0.7rem 0;
@@ -147,11 +150,11 @@ a {
 .experience ul,
 .education ul {
     list-style-type: initial;
-    list-style-image: url(../resume/diamond-logo.svg);
+    list-style-image: url(../resume/diamond.svg);
 }
 
 .fake-li:before {
-    content: url(../resume/diamond-logo.svg);
+    content: url(../resume/diamond.svg);
     width: 8px;
     height: 8px;
     display: inline-block;
