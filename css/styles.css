@@ -3,24 +3,30 @@
     color: #222;
     box-sizing: border-box;
 }
+:root {
+    --dark-pink: #ff9393;
+    --med-pink: #ffb7b5;
+    --light-pink: #ffd4d3;
+    --white-pink: rgb(255,247,247);
+}
+
 i { /* Icon colour */
-    color: #ff9393;
+    color: var(--dark-pink);
+    width: 20px;
 }
 .nopadding { padding: 0; }
 .nomargin { margin: 0; }
 
 html {
     min-height: 100%;
-    background: rgb(255,247,247);
+    background: var(--white-pink);
     background: linear-gradient(0deg, rgba(255,232,232,1) 0%, rgba(255,247,247,0) 40%);
-    border-top: 5px solid #ffb7b5;
+    border-top: 5px solid var(--med-pink);
 }
 
 body {
-    width: 600px;
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 5vh 5vw 5vh 30px;
+    /* Fixes auto margin counting the scrollbar size */
+    margin-left: calc(100vw - 100%);
 }
 
 .corner {
@@ -38,31 +44,40 @@ body {
     height: 0;
     border-style: solid;
     border-width: 80px 80px 0 0;
-    border-color: #ffd4d3 transparent transparent transparent;
+    border-color: var(--light-pink) transparent transparent transparent;
     position: absolute;
     top: 5px;
     left: 0;
     z-index: -2;
 }
 
-header {
-    --h1-margin: 0.7rem 0;
+main {
+    width: 600px;
+    max-width: 90vw;
+    margin: 60px auto;
+}
+@media only screen and (max-width: 750px) {
+    main { padding: 0 5vw; }
 }
 
 h1 {
-    margin: var(--h1-margin);
+    margin: 0.7rem 0;
 }
 
 h2 {
     margin-top: 2rem;
 }
 
-ul {
+h3 {
+    margin: 1.5rem 0 0.7rem;
+}
+
+ul, .fake-li {
     padding-left: 1rem;
 }
 
 li {
-    list-style: none;
+    list-style-type: none;
     margin-bottom: .5rem;
 }
 
@@ -72,15 +87,12 @@ li .fab, li .fas {
 }
 
 a {
-    text-decoration-color: #ffd4d3;
+    text-decoration-color: var(--med-pink);
     text-decoration-style: dashed;
 }
 
 .social {
     display: flex;
-}
-.social li {
-    width: 5%;
 }
 
 .resume-link {
@@ -88,16 +100,16 @@ a {
     font-size: 1.5rem;
     font-weight: bold;
     /* text-transform: uppercase; */
-    background-color: #ff9393;
+    background-color: var(--dark-pink);
     padding: 0.7rem;
     margin: 2rem 0 0;
     border-radius: 0.7rem;
-    color: rgb(255,247,247);
+    color: var(--white-pink);
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.18);
 }
 .resume-link i {
-    color: rgb(255,247,247);
+    color: var(--white-pink);
     font-size: 1.3rem;
 }
 
@@ -105,9 +117,16 @@ a {
 #resume header {
     display: flex;
     justify-content: space-between;
-    margin: var(--h1-margin)
+    margin: 0.7rem 0;
 }
 #resume header ul { text-align: right; }
+
+#resume h2 {
+    border-bottom: 1px solid var(--dark-pink);
+    padding-bottom: 0.2rem;
+}
+
+#resume h3 i { width: 25px; }
 
 #resume h3 + p,
 #resume h3 + p + p {
@@ -115,13 +134,29 @@ a {
 }
 #resume h3 + p + p {
     font-style: italic;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
-#resume .horizontal-list { text-align: left; }
-#resume .horizontal-list li { 
-    font-size: 100%; 
-    list-style-type: none; 
-    display: inline-block; /*See media query for other version*/ 
-    width: 24%; 
+.columns {
+    column-count: 4;
+}
+@media only screen and (max-width: 620px) {
+    .columns { column-count: 3; }
+}
+@media only screen and (max-width: 460px) {
+    .columns { column-count: 2; }
+}
+
+.experience ul,
+.education ul {
+    list-style-type: initial;
+    list-style-image: url(../resume/diamond.svg);
+}
+
+.fake-li:before {
+    content: url(../resume/diamond.svg);
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin: 0 0.2rem 0 -0.7rem;
 }
