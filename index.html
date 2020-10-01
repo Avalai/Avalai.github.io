@@ -1,74 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Marina Milette - Web developer in Ottawa, ON">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Marina Milette - Web developer in Ottawa, ON"
+    />
 
     <title>Marina Milette</title>
 
-    <link href="css/styles.css" rel="stylesheet" >
+    <link href="home-css/styles.css" rel="stylesheet" />
 
-    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABXAAAAVwAAAFcAAABXAAAAV3M3WP9zN1j/czdY/3M3WP9zN1j/uEuH/wAAAFcAAABXAAAAVwAAAAAAAAAAAAAAAAAAAACKOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuH/7hLh5kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKOmb/ijpmjgAAAAAAAAAAijpm/4o6Zv+KOmb/ijpm/7hLh/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuEuH/wAAAAAAAAAAAAAAAIo6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuHmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALhLh/8AAAAAAAAAAAAAAACKOmaOijpm/4o6Zv+KOmb/ijpm/7hLh/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4S4f/uEuHngAAAAAAAAAAAAAAAIo6Zv+KOmb/ijpm/4o6Zv+4S4f/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALhLh/+4S4f/AAAAAAAAAACKOmb/czdY/3M3WP9zN1j/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKOmb/ijpm/3M3WP9zN1j/czdY/3M3WP9zN1hlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIo6Zo6KOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+4S4eZAAAAAAAAAAAAAAAAAAAAAMjV1TiKOmb/ijpm/2ska3VrJGs0HiAf/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuH/wAAAAAAAAAAAAAAAAAAAAC+yspAijpm/4o6Zv9rJGs0AAAAAB4gH/+KOmb/ayRrdWskazQeIB//ijpm/7hLh/8AAAAAAAAAAAAAAAAAAAAAAAAAAIo6Zv+KOmb/ayRrdWskazRrJGt1ijpm/2skazQAAAAAHiAf/4o6Zv+4S4f/AAAAAAAAAAAAAAAAAAAAAAAAAACKOmaOijpm/4o6Zv+KOmb/ijpm/4o6Zv9rJGt1ayRrNGska3W4S4f/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIo6Zv+KOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuHmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4S4d3uEuH/4o6Zv+KOmaHxszMN4o6ZoeKOmb/uEuH/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALhLh/8AAAAAAAAAAAAAAAAAAAAAuEuH/wAAAAAAAAAAAAAAAAAAAAAAAAAA+B8AAMAfAACYPwAAuB8AALgfAACcHwAAzD8AAPgfAADgAwAA5gMAAOZjAADnYwAA4HcAAPAHAAD4jwAA+98AAA==" rel="icon" type="image/x-icon" />
-    <script src="https://kit.fontawesome.com/396969c77d.js" crossorigin="anonymous"></script>
-</head>
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABXAAAAVwAAAFcAAABXAAAAV3M3WP9zN1j/czdY/3M3WP9zN1j/uEuH/wAAAFcAAABXAAAAVwAAAAAAAAAAAAAAAAAAAACKOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuH/7hLh5kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKOmb/ijpmjgAAAAAAAAAAijpm/4o6Zv+KOmb/ijpm/7hLh/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuEuH/wAAAAAAAAAAAAAAAIo6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuHmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALhLh/8AAAAAAAAAAAAAAACKOmaOijpm/4o6Zv+KOmb/ijpm/7hLh/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4S4f/uEuHngAAAAAAAAAAAAAAAIo6Zv+KOmb/ijpm/4o6Zv+4S4f/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALhLh/+4S4f/AAAAAAAAAACKOmb/czdY/3M3WP9zN1j/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKOmb/ijpm/3M3WP9zN1j/czdY/3M3WP9zN1hlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIo6Zo6KOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+4S4eZAAAAAAAAAAAAAAAAAAAAAMjV1TiKOmb/ijpm/2ska3VrJGs0HiAf/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuH/wAAAAAAAAAAAAAAAAAAAAC+yspAijpm/4o6Zv9rJGs0AAAAAB4gH/+KOmb/ayRrdWskazQeIB//ijpm/7hLh/8AAAAAAAAAAAAAAAAAAAAAAAAAAIo6Zv+KOmb/ayRrdWskazRrJGt1ijpm/2skazQAAAAAHiAf/4o6Zv+4S4f/AAAAAAAAAAAAAAAAAAAAAAAAAACKOmaOijpm/4o6Zv+KOmb/ijpm/4o6Zv9rJGt1ayRrNGska3W4S4f/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIo6Zv+KOmb/ijpm/4o6Zv+KOmb/ijpm/4o6Zv+KOmb/uEuHmQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4S4d3uEuH/4o6Zv+KOmaHxszMN4o6ZoeKOmb/uEuH/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALhLh/8AAAAAAAAAAAAAAAAAAAAAuEuH/wAAAAAAAAAAAAAAAAAAAAAAAAAA+B8AAMAfAACYPwAAuB8AALgfAACcHwAAzD8AAPgfAADgAwAA5gMAAOZjAADnYwAA4HcAAPAHAAD4jwAA+98AAA=="
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/396969c77d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
+    <a href="../">
+      <i class="fas fa-alicorn corner" style="position: absolute;"></i>
+    </a>
 
-  <a href="../">
-    <i class="fas fa-alicorn corner" style="position: absolute"></i>
-  </a>
+    <main>
+      <header>
+        <h1>Marina Milette</h1>
+        <p>A web developer in Ottawa, Ontario.</p>
+      </header>
 
-  <main>
-    <header>
-      <h1>Marina Milette</h1>
-      <p>A web developer in Ottawa, Ontario.</p>
-    </header>
+      <section>
+        <h2>Work</h2>
+        <ul>
+          <li>
+            <i class="fas fa-pizza-slice"></i> Web Developer at
+            <a href="https://www.RideShark.com/" target="_blank">RideShark</a> -
+            4 years
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Work</h2>
-      <ul>
-          <li><i class="fas fa-pizza-slice"></i> Web Developer at <a href="https://www.RideShark.com/" target="_blank">RideShark</a> - 4 years</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <i class="fas fa-graduation-cap"></i> Algonquin College -
+            Interactive Multimedia Development
+          </li>
+          <li>
+            <i class="fas fa-typewriter" style="width: 20px;"></i> Algonquin
+            College - Professional Writing
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><i class="fas fa-graduation-cap"></i> Algonquin College - Interactive Multimedia Development</li>
-        <li><i class="fas fa-typewriter" style="width: 20px;"></i> Algonquin College - Professional Writing</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Contact</h2>
+        <ul>
+          <li>
+            <i class="fab fa-github-square"></i>
+            <a href="https://github.com/Avalai" target="_blank">Github</a>
+          </li>
+          <li>
+            <i class="fab fa-codepen"></i>
+            <a href="https://codepen.io/Avalai" target="_blank">CodePen</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope-square"></i>
+            <a href="mailto:marina.milette@gmail.com"
+              >marina.milette@gmail.com</a
+            >
+          </li>
+          <div class="social">
+            <li>
+              <a href="https://ca.linkedin.com/in/marinamilette" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/avalai/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Avalai" target="_blank"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+            </li>
+          </div>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Contact</h2>
-      <ul>
-        <li><i class="fab fa-github-square"></i> <a href="https://github.com/Avalai" target="_blank">Github</a></li>
-        <li><i class="fab fa-codepen"></i> <a href="https://codepen.io/Avalai" target="_blank">CodePen</a></li>
-        <li><i class="fas fa-envelope-square"></i> <a href="mailto:marina.milette@gmail.com">marina.milette@gmail.com</a></li>
-        <div class="social">
-          <li><a href="https://ca.linkedin.com/in/marinamilette" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://www.instagram.com/avalai/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <li><a href="https://twitter.com/Avalai" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        </div>
-      </ul>
-    </section>
+      <section>
+        <h2>Interests and Hobbies</h2>
+        <ul>
+          <li><i class="fas fa-keyboard"></i> Mechanical Keyboards</li>
+          <li>
+            <i class="fas fa-gamepad-alt"></i> Town Simulation Video Games
+          </li>
+          <li><i class="fas fa-phone-laptop"></i> Digital Pen Technology</li>
+          <li><i class="fas fa-trees"></i> Hiking & Camping</li>
+          <li><i class="fas fa-seedling"></i> Plant Identification</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Interests and Hobbies</h2>
-      <ul>
-        <li><i class="fas fa-keyboard"></i> Mechanical Keyboards</li>
-        <li><i class="fas fa-gamepad-alt"></i> Town Simulation Video Games</li>
-        <li><i class="fas fa-phone-laptop"></i> Digital Pen Technology</li>
-        <li><i class="fas fa-trees"></i> Hiking & Camping</li>
-        <li><i class="fas fa-seedling"></i> Plant Identification</li>
-      </ul>
-    </section>
-
-    <section>
-      <a href="../resume/" class="resume-link"> <i class="far fa-file"></i> Resume</a>
-    </section>
-  </main>
-
-</body>
+      <section>
+        <a href="../resume/" class="resume-link">
+          <i class="far fa-file"></i> Resume</a
+        >
+      </section>
+    </main>
+  </body>
 </html>
