@@ -1,0 +1,37 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "styles";
+
+.alert-secondary {
+  background-color: #f3f3f3;
+  .callout-icon,
+  p {
+    margin: 0.5rem 0;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
+.container .row {
+  h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2rem 0 1rem;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+}
