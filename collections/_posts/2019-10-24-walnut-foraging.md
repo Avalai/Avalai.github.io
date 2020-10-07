@@ -61,7 +61,7 @@ Harvesting the walnuts is pretty time consuming. We usually split it up so that 
 
 The person processing the fruits steps on them, then pries them apart to pull out the center nut. Toss the core into a bucket and the rind into a yard waste bag. I definitely recommend wearing plastic gloves and clothes you don't mind getting stained.
 
-## Processing
+## 💧 Processing
 
 We put all our walnuts into a bucket, filled it with water, and stirred vigorously. After dumping and refilling the water a few times, the walnuts came out significantly cleaner.
 
