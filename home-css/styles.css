@@ -7,12 +7,19 @@
     --dark-pink: #ff9393;
     --med-pink: #ffb7b5;
     --light-pink: #ffd4d3;
-    --white-pink: rgb(255,247,247);
+    --white-pink: #fff7f7;
 }
 
 i { /* Icon colour */
     color: var(--dark-pink);
     width: 20px;
+}
+img[src$=".svg"] {
+    color: var(--dark-pink);
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 3px;
 }
 .nopadding { padding: 0; }
 .nomargin { margin: 0; }
@@ -43,7 +50,7 @@ body {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 80px 80px 0 0;
+    border-width: 100px 100px 0 0;
     border-color: var(--light-pink) transparent transparent transparent;
     position: absolute;
     top: 5px;
